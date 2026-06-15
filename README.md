@@ -4,6 +4,10 @@ Reconstruct a full **96×96 RGB image** from **9 scrambled 28×28 patches** whos
 
 Built in **Keras / TensorFlow** and trained on the **STL-10** unlabeled set (100,000 images) on Google Colab.
 
+![Example reconstructions](assets/sample_reconstructions.png)
+
+*Left to right: scrambled input patches, ground-truth image, and the model's reconstruction.*
+
 ## Results
 
 | Metric | Value |
@@ -12,6 +16,8 @@ Built in **Keras / TensorFlow** and trained on the **STL-10** unlabeled set (100
 | Mean-patch baseline MAE | 0.1826 |
 | Improvement over baseline | ~4× lower error |
 | Trainable parameters | 1.67M (constraint: < 6M) |
+
+<p align="center"><img src="assets/training_curve.png" width="520" alt="Training and validation MAE over epochs"></p>
 
 ## Approach: "place the real pixels, then inpaint"
 
